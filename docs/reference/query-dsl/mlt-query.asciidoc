@@ -182,8 +182,7 @@ for documents `like: "Apple"`, but `unlike: "cake crumble tree"`. The syntax
 is the same as `like`.
 
 `fields`::
-The fields to perform the parsed query against. Defaults to the
-`index.query.default_field` index settings, which in turn defaults to * (all searchable fields).
+A list of fields to fetch and analyze the text from.
 
 `like_text`::
 The text to find documents like it.
@@ -229,7 +228,8 @@ explicitly ignore them, as for the purposes of document similarity it seems
 reasonable to assume that "a stop word is never interesting".
 
 `analyzer`::
-The search on each field is performed independantly using the individual field's default analyzer.
+The analyzer that is used to analyze the free form text. Defaults to the
+analyzer associated with the first field in `fields`.
 
 [float]
 ==== Query Formation Parameters

@@ -2,7 +2,8 @@
 == Meta-Fields
 
 Each document has metadata associated with it, such as the `_index`, mapping
-<<mapping-type-field,`_type`>>, and `_id` meta-fields.  The You can customize the behaviour of some of these meta-fields when you create a mapping type.
+<<mapping-type-field,`_type`>>, and `_id` meta-fields.  The behaviour of some of these meta-fields
+can be customised when a mapping type is created.
 
 [float]
 === Identity meta-fields
@@ -19,6 +20,10 @@ Each document has metadata associated with it, such as the `_index`, mapping
 <<mapping-id-field,`_id`>>::
 
     The document's ID.
+
+<<mapping-uid-field,`_uid`>>::
+
+    Alias for `_id`.
 
 [float]
 === Document source meta-fields
@@ -37,14 +42,14 @@ Each document has metadata associated with it, such as the `_index`, mapping
 
 <<mapping-field-names-field,`_field_names`>>::
 
-    All fields in the document that contain non-null values.
+    All fields in the document which contain non-null values.
 
 [float]
 === Routing meta-field
 
 <<mapping-routing-field,`_routing`>>::
 
-    A custom routing value that routes a document to a particular shard.
+    A custom routing value which routes a document to a particular shard.
 
 [float]
 === Other meta-field
@@ -67,4 +72,3 @@ include::fields/routing-field.asciidoc[]
 include::fields/source-field.asciidoc[]
 
 include::fields/type-field.asciidoc[]
-
